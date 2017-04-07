@@ -1,6 +1,6 @@
 package org.foobarspam.figurasGeometricas;
 
-public class Cuadrado extends FigurasGeometricas{
+public class Cuadrado extends FigurasGeometricas implements Drawable{
 	private double lados; 
 
 	public Cuadrado () {
@@ -23,5 +23,16 @@ public class Cuadrado extends FigurasGeometricas{
 		
 		return getLados()*4;
 	} 
+	
+	@Override
+	public void draw(){
+		System.out.println("Esto es un: " + this.getNombre());
+	}
+	
+	
+	@Override
+	public void applyTheme(){
+		System.out.println("Aplicado un tema a: " + this.getNombre());
+	}
 
 }

@@ -31,8 +31,16 @@ public class Circulo extends FigurasGeometricas{
 		
 	@Override
 	public double area() {
-		// encapsulación de la información => acceder a las propiedades mediante get
 		return getRadio() * PI;	
 	}
-
+	@Override
+	public void draw(){
+		System.out.println("Esto es un: " + this.getNombre());
+	}
+	
+	
+	@Override
+	public void applyTheme(){
+		System.out.println("Aplicado un tema a: " + this.getNombre());
+	}
 }

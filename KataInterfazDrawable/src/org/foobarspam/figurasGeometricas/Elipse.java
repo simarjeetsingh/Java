@@ -45,5 +45,8 @@ public class Elipse extends FigurasGeometricas {
 		return getSemiEjeMayor() * getSemiEjeMenor() * PI;
 		
 	}
+	public void draw(){
+		System.out.println("Esto es una: " + this.getNombre());
+	}
 
 }

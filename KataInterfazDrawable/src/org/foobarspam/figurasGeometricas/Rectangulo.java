@@ -1,6 +1,6 @@
 package org.foobarspam.figurasGeometricas;
 
-public class Rectangulo extends FigurasGeometricas {
+public class Rectangulo extends FigurasGeometricas  implements Drawable{
 
 	private double altura 	= 0d;
 	private double anchura 	= 0d;
@@ -43,7 +43,16 @@ public class Rectangulo extends FigurasGeometricas {
 	public double area() {
 		return getAltura() * getAnchura();
 	}
-
+	@Override
+	public void draw() {
+			System.out.println("Esto es un: " + this.getNombre());
+	}
+	
+		
+	@Override
+	public void applyTheme(){
+		System.out.println("Aplicado un tema a: " + this.getNombre());
+	}
 	
 
 }
