@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<emt:carrera xmlns:emt="https://api.mobipalma.mobi/docs/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://api.mobipalma.mobi/docs/ Cotxox.xsd">
+    <tarjetaCredito>tarjetaCredito</tarjetaCredito>
+    <origen>Palma</origen>
+    <destino>Palmanova</destino>
+    <distancia>15.0</distancia>
+    <tiempoEsperadoMinutos>14</tiempoEsperadoMinutos>
+    <tiempoCarrera>15</tiempoCarrera>
+    <costeEsperado>14.0</costeEsperado>
+    <propina>2</propina>
+    <costeTotal>16.0</costeTotal>
+    <conductor>
+        <nombre>Fox</nombre>
+        <matricula>2879FFR</matricula>
+        <modelo>Peugeot 308</modelo>
+        <valoraciones>4 5 4 5</valoraciones>
+        <ocupado>true</ocupado>
+        <valoracionMedia>4.5</valoracionMedia>
+    </conductor>
+</emt:carrera>
