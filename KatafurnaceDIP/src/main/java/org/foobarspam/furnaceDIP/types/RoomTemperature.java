@@ -4,8 +4,7 @@ public class RoomTemperature {
 	
 	private double temperature = 0;
 	
-	public RoomTemperature(double temperature){
-		this.temperature = temperature;
+	public RoomTemperature(){	
 	}
 
 	public double getTemperature() {

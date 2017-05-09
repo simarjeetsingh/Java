@@ -5,8 +5,12 @@ import org.foobarspam.furnaceDIP.hardware.Regulator;
 import org.foobarspam.furnaceDIP.hardware.RemoteCommandSensor;
 import org.foobarspam.furnaceDIP.interfaces.Heater;
 import org.foobarspam.furnaceDIP.interfaces.Thermometer;
+import org.foobarspam.furnaceDIP.inyector.RegulatorModule;
 import org.foobarspam.furnaceDIP.otherstuff.Jedi;
 import org.foobarspam.furnaceDIP.types.RoomTemperature;
+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 
 /**
  * Hello world!
@@ -19,18 +23,28 @@ public class App
     	final double minTemp = 15.0;
         final double maxTemp = 21.0;
         
-        RoomTemperature temperature = new RoomTemperature(15);
-        Heater heater = new GasHeater();
-        Thermometer thermometer = new RemoteCommandSensor();
+        Injector injector = Guice.createInjector(new RegulatorModule());  
         
-        Regulator regulator = new Regulator();
+        /*
+         * Now that we've got the injector, we can build objects.
+         * El codigo equivalente es:
+         * Heater heater = new GasHeater();
+         * Thermometer thermometer = new RemoteCommandSensor();
+         * Regulador regulator = new Regulador(Thermometer, GasHeater);
+         */ 
+        Regulator regulator = injector.getInstance(Regulator.class);
+        
+        regulator.setMinTemp(minTemp);
+        regulator.setMaxTemp(maxTemp);
         
         System.out.println( "Arrancando..." );
-        regulator.regulate(thermometer, heater, minTemp, maxTemp, temperature);
+        regulator.regulate();
         
         Jedi yoda = new Jedi();
         System.out.println( "\nArrancando a Yoda: " );
-        regulator.regulate(thermometer, yoda, minTemp, maxTemp, temperature);
+        regulator.regulate();
         yoda.speak();
+        
+        
     }
 }
