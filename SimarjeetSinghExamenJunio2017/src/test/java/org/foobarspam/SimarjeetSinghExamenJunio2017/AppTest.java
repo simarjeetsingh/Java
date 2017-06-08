@@ -42,7 +42,6 @@ public class AppTest extends TestCase {
 				break;
 			}
 		}
-
 		assertEquals(0, setMrMe.size());
 
 	}
