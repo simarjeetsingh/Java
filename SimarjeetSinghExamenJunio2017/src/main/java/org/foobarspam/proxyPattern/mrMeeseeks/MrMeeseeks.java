@@ -27,7 +27,7 @@ public class MrMeeseeks implements Doable{
 	}
 	//Metodos
 	public void sayMessageOnCreate(){
-		System.out.println("I'm Mr Meeseeks " +this.id + ". look at meeee!");//\n
+		System.out.println("I'm Mr Meeseeks " +this.id + ". look at meeee!");
 	}
 	
 	public void sayMessageOnRequest(){
@@ -40,7 +40,7 @@ public class MrMeeseeks implements Doable{
 	 * "Oooh yeah! Can do!"; "Yes sireee!"; "Oh, yeah! Yes, ma'am!"
          */	
 
-	public String generateMessageOnRequest(){
+	private String generateMessageOnRequest(){
 		Integer mensajeRandom = ThreadLocalRandom.current().nextInt(0, messageOnRequest.length);
 		return  messageOnRequest[mensajeRandom];
 		
@@ -50,7 +50,8 @@ public class MrMeeseeks implements Doable{
 		System.out.println(this.messageOnDone);
 	}
 	public void sayMessageOnExplode(){
-		System.out.println(this.messageOnExplode);
+		stopExisting();
+		
 	}
 	
 	public void formulateRequest(String string1, String string2){
@@ -59,7 +60,9 @@ public class MrMeeseeks implements Doable{
 		sayMessageOnDone();
 	}
 	//public void doRequest(String String, String string){}
-	public void stopExisting(){}
+	public void stopExisting(){
+		System.out.println(this.messageOnExplode +" "+ this.id);
+	}
 	
 	public String doRequest(String accion, String objeto) {		
 		return accion +" "+ objeto;
