@@ -7,9 +7,10 @@ import org.foobarspam.proxyPattern.mrMeeseeks.ProxyMrMeeseeks;
 
 public class App {
 	
-	public App(){}
+	//public App(){}
 	
 	public static void main( String[] args ){
+		//System.out.println( "Hello World!" );
 				
 		// Crea una estructura de datos llamada setMrMe donde almacenar los Mr Meeseeks creados
 		ArrayList<MrMeeseeks> setMrMe = new ArrayList<MrMeeseeks>();		
@@ -47,17 +48,26 @@ public class App {
 		}
 		
 	    }
-
+		
+		
 		/* collectIds(setMrMe, ids)
 		 * Almacena en un array los ids de los Mr Meeseeks creados
 		 */
-
+		public static void collectIds(ArrayList<MrMeeseeks> setMrMe, ArrayList<Integer> ids) {
+		}
+		
 		/* listMrMeeseeks(setMrMe)
 		 * Lista los ids de todos los Mr Meeseeks creados
 		 */
+		public static void listMrMeeseeks(ArrayList<MrMeeseeks> setMrMe) {
+
+		}
 
 		/* explodeMrMeeseeks(setMrMe, id)
 		 * elimna del conjunto de Mr Meeseeks creados el que ya ha completado su cometido
 		 */	
+		public static void explodeMrMeeseeks(ArrayList<MrMeeseeks> setMrMe, Integer id) {
+			
+		}
 
 }
