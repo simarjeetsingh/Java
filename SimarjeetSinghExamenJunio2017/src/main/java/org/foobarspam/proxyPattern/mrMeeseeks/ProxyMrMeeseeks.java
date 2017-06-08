@@ -5,27 +5,27 @@ import java.util.ArrayList;
 public class ProxyMrMeeseeks {
 	
 	private MrMeeseeks mrMe;
-	
-	private ArrayList<MrMeeseeks> meeseeks = new ArrayList<MrMeeseeks>();
+		
+	//private ArrayList<MrMeeseeks> meeseeks = new ArrayList<MrMeeseeks>();
 	
 	public ProxyMrMeeseeks(){
 		
 	}
-	
+		
 	public MrMeeseeks getMrMe() {
 		return mrMe;
 	}
 
 
-	public void createMrMeeseeks(ArrayList<MrMeeseeks> meeseeks){
+	public void createMrMeeseeks(ArrayList<MrMeeseeks> setMrMe){
 		MrMeeseeks mrMe = new MrMeeseeks();
 		mrMe.sayMessageOnCreate();
-		meeseeks.add(mrMe);
+		setMrMe.add(mrMe);
 		
 	}
 	
-	public void pushButton(ArrayList<MrMeeseeks> meeseeks){	
-		createMrMeeseeks(meeseeks);	
+	public void pushButton(ArrayList<MrMeeseeks> setMrMe){	
+		createMrMeeseeks(setMrMe);	
 				
 	}
 }

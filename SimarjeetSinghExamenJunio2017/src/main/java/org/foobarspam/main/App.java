@@ -54,12 +54,18 @@ public class App {
 		 * Almacena en un array los ids de los Mr Meeseeks creados
 		 */
 		public static void collectIds(ArrayList<MrMeeseeks> setMrMe, ArrayList<Integer> ids) {
+			for(MrMeeseeks mrMe : setMrMe){
+				ids.add(mrMe.getId());
+			}
 		}
 		
 		/* listMrMeeseeks(setMrMe)
 		 * Lista los ids de todos los Mr Meeseeks creados
 		 */
-		public static void listMrMeeseeks(ArrayList<MrMeeseeks> setMrMe) {
+		public static void listMrMeeseeks(ArrayList<MrMeeseeks> setMrMe) {			
+			for(MrMeeseeks mrMe : setMrMe) {
+				System.out.println(mrMe.getId());
+			}
 
 		}
 
@@ -67,6 +73,16 @@ public class App {
 		 * elimna del conjunto de Mr Meeseeks creados el que ya ha completado su cometido
 		 */	
 		public static void explodeMrMeeseeks(ArrayList<MrMeeseeks> setMrMe, Integer id) {
+			for(MrMeeseeks mrMe : setMrMe){
+				if(mrMe.getId().equals(id)){
+					mrMe.sayMessageOnExplode();
+					setMrMe.remove(id);
+					break;
+				}
+				
+				
+			}
+			
 			
 		}
 
