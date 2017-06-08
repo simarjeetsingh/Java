@@ -6,7 +6,6 @@ public class ProxyMrMeeseeks {
 	
 	private MrMeeseeks mrMe;
 		
-	//private ArrayList<MrMeeseeks> meeseeks = new ArrayList<MrMeeseeks>();
 	
 	public ProxyMrMeeseeks(){
 		
@@ -25,7 +24,6 @@ public class ProxyMrMeeseeks {
 	}
 	
 	public void pushButton(ArrayList<MrMeeseeks> setMrMe){	
-		createMrMeeseeks(setMrMe);	
-				
+		createMrMeeseeks(setMrMe);				
 	}
 }
